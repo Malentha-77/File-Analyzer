@@ -6,5 +6,11 @@ def read_file():
 def count_lines():
     lines = read_file().split("\n")
     return len(lines)
-
 print(count_lines())
+
+
+def count_words():
+    words = read_file().split()
+    return len(words)
+
+print(count_words())
