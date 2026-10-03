@@ -3,3 +3,6 @@ def read_file():
         sample = file.read()
     return sample
 
+def count_lines():
+    lines = read_file().split("\n")
+    return len(lines)
