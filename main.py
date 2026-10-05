@@ -32,3 +32,11 @@ def find_longest_word():
         if len(word) > len(longest):
             longest = word
     return longest
+
+def find_word(word):
+    words = read_file().split()
+
+    for item in words:
+        if item == word:
+            return item
+    return None
