@@ -1,3 +1,6 @@
+from itertools import count
+
+
 def read_file():
     with open("sample.txt", "r") as file:
         sample = file.read()
@@ -19,7 +22,6 @@ def count_word(word):
     for item in words:
         if item == word:
             count += 1
-
     return count
 
 def find_longest_word():
@@ -29,5 +31,4 @@ def find_longest_word():
     for word in words:
         if len(word) > len(longest):
             longest = word
-
     return longest
