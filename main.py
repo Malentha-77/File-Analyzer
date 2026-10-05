@@ -21,3 +21,13 @@ def count_word(word):
             count += 1
 
     return count
+
+def find_longest_word():
+    words = read_file().split()
+    longest = ""
+
+    for word in words:
+        if len(word) > len(longest):
+            longest = word
+
+    return longest
