@@ -40,3 +40,7 @@ def find_word(word):
         if item == word:
             return item
     return None
+
+def count_characters():
+    characters = read_file()
+    return len(characters)
