@@ -44,3 +44,40 @@ def find_word(word):
 def count_characters():
     characters = read_file()
     return len(characters)
+
+def analyze_file():
+    choice = ""
+
+    while choice != "5":
+        print("Please select an option:")
+        print("1. Count lines")
+        print("2. Count words")
+        print("3. Count specific word")
+        print("4. Find longest word")
+        print("5. Exit")
+
+        choice = input("Enter your choice (1-5): ")
+
+        if choice == "1":
+            print("Number of lines:", count_lines())
+
+        elif choice == "2":
+            print("Number of words:", count_words())
+
+        elif choice == "3":
+            word = input("Enter the word to count: ")
+            print(f"Count of '{word}':", count_word(word))
+
+        elif choice == "4":
+            print("Longest word:", find_longest_word())
+            
+        elif choice == "5":
+            print("Exiting the program.")
+            return
+
+        else:
+            print("Invalid choice. Please try again.")
+
+
+analyze_file()
+
