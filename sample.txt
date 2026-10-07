@@ -1,0 +1,3 @@
+Python is fun.
+I am learning programming.
+Python helps me solve problems.
