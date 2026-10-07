@@ -1,5 +1,3 @@
-from itertools import count
-
 
 def read_file():
     with open("sample.txt", "r") as file:
