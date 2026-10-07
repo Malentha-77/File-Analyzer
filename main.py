@@ -46,15 +46,17 @@ def count_characters():
 def analyze_file():
     choice = ""
 
-    while choice != "5":
+    while choice != "7":
         print("Please select an option:")
         print("1. Count lines")
         print("2. Count words")
         print("3. Count specific word")
         print("4. Find longest word")
-        print("5. Exit")
+        print("5. Find a word")
+        print("6. Count characters")  
+        print("7. Exit")
 
-        choice = input("Enter your choice (1-5): ")
+        choice = input("Enter your choice (1-7): ")
 
         if choice == "1":
             print("Number of lines:", count_lines())
@@ -68,14 +70,29 @@ def analyze_file():
 
         elif choice == "4":
             print("Longest word:", find_longest_word())
-            
+
         elif choice == "5":
+            word = input("Enter the word to find: ").strip()
+
+            if not word:
+                print("Invalid input. Please enter a valid word.")
+            else:
+                result = find_word(word)
+
+                if result:
+                    print(f"'{word}' found in the file.")
+                else:
+                    print(f"'{word}' not found in the file.")
+            
+        elif choice == "6":
+            print("Number of characters:", count_characters())
+
+        elif choice == "7":
             print("Exiting the program.")
             return
 
         else:
             print("Invalid choice. Please try again.")
-
 
 analyze_file()
 
